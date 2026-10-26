@@ -1,6 +1,7 @@
 # AULA F75 Studio
 
-An original C++20 / Qt 6 QML dashboard for the AULA F75 keyboard: left icon
+An open-source companion studio app and alternative driver for the 
+AULA F75 mechanical keyboard to customize layouts, RGB lighting, and macros: left icon
 rail, dark tonal surfaces, a live keyboard canvas.
 It speaks the keyboard's own HID protocol, recovered by static analysis of the
 vendor driver (`OemDrv.exe`, SINO WEALTH "G5KB" family) with REA/Ghidra. No
