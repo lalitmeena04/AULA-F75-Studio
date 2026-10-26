@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": { "major": 3, "minor": 21, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "msvc-debug",
+      "displayName": "MSVC Debug (Ninja)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/msvc-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.11.2/msvc2022_64"
+      }
+    },
+    {
+      "name": "msvc-release",
+      "displayName": "MSVC Release (Ninja)",
+      "inherits": "msvc-debug",
+      "binaryDir": "${sourceDir}/build/msvc-release",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "msvc-debug", "configurePreset": "msvc-debug" },
+    { "name": "msvc-release", "configurePreset": "msvc-release" }
+  ],
+  "testPresets": [
+    { "name": "msvc-debug", "configurePreset": "msvc-debug", "output": { "outputOnFailure": true } },
+    { "name": "msvc-release", "configurePreset": "msvc-release", "output": { "outputOnFailure": true } }
+  ]
+}

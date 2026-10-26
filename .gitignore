@@ -1,72 +1,61 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
-build/
-Build/
-build-*/
-
-# CMake generated files
-CMakeFiles/
+# Build output
+/build/
+/bin/
+cmake-build-*/
 CMakeCache.txt
+CMakeFiles/
 cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
+CTestTestfile.cmake
+CMakeUserPresets.json
+Testing/
+_deps/
+.cache/
 
-# Temporary files
+# Qt generated
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+.qmake.stash
+.qmake.cache
+*_qmltyperegistrations.cpp
+
+# MSVC/compiler
+*.obj
+*.o
+*.pdb
+*.ilk
+*.idb
+*.exp
+*.lib
+*.dll
+*.exe
+
+# IDE
+.vs/
+.vscode/
+.idea/
+.qtcreator/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# OS/temp
+Thumbs.db
+Desktop.ini
+.DS_Store
 *.tmp
-*.log
 *.bak
 *.swp
 
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/
-
-# Local development environment files
+# Local dev-only (not distributed)
 .local-evidence/
-.qtcreator/
+dev-notes/
+*.log
+
+# Release artifacts (safety net)
+/release/
+/dist/
